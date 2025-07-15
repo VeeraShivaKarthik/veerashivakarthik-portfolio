@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/veerashivakarthik-portfolio/static/css/main.321fc33a.css",
+    "main.js": "/veerashivakarthik-portfolio/static/js/main.87c1d948.js",
+    "static/js/488.b24e7c38.chunk.js": "/veerashivakarthik-portfolio/static/js/488.b24e7c38.chunk.js",
+    "service-worker.js": "/veerashivakarthik-portfolio/service-worker.js",
+    "index.html": "/veerashivakarthik-portfolio/index.html",
+    "main.321fc33a.css.map": "/veerashivakarthik-portfolio/static/css/main.321fc33a.css.map",
+    "main.87c1d948.js.map": "/veerashivakarthik-portfolio/static/js/main.87c1d948.js.map",
+    "488.b24e7c38.chunk.js.map": "/veerashivakarthik-portfolio/static/js/488.b24e7c38.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.321fc33a.css",
+    "static/js/main.87c1d948.js"
+  ]
+}
