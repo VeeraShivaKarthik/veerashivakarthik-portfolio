@@ -30,6 +30,10 @@ const certifications = [
     title: 'Introduction To Cyber Security',
     file: '/I2CSUpdate20250604-24-4nkeha.pdf',
     year: '',
+  {
+    title: 'Cybersecurity Essentials',
+    file: '/CybersecurityEssentialsUpdate20250604-27-dxzj5e.pdf',
+    year: '',
   },
   {
     title: 'AWS Academy Graduate - Machine Learning Foundations',
