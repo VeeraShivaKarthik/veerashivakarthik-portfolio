@@ -50,9 +50,9 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="py-20 bg-gray-900 dark:bg-white fade-in">
+    <section id="certifications" className="py-20 bg-gray-900 dark:bg-white">
       <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl heading mb-10 text-indigo-400 dark:text-blue-600 text-center">Certifications</h2>
+        <h2 className="text-3xl font-bold mb-10 text-indigo-400 dark:text-blue-600 text-center">Certifications</h2>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -63,21 +63,11 @@ export default function Certifications() {
           {certifications.map((cert, idx) => (
             <motion.div
               key={cert.title}
+              className="bg-gray-800 dark:bg-white rounded-lg shadow-lg p-6 flex flex-col items-start mb-6 last:mb-0 transition-transform hover:scale-105 hover:shadow-2xl"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              animate={{
-                y: [0, -10, 0, 10, 0],
-                transition: {
-                  duration: 7 + idx,
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                  ease: 'easeInOut',
-                  delay: idx * 0.6,
-                },
-              }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="glass-card p-6 flex flex-col items-start mb-6 last:mb-0 transition-transform hover:scale-105 hover:shadow-2xl"
             >
               <h3 className="text-lg font-bold mb-2 text-indigo-400 dark:text-blue-600">{cert.title}</h3>
               <a href={cert.file} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 dark:text-gray-700 underline hover:text-indigo-400 dark:hover:text-blue-600 transition">

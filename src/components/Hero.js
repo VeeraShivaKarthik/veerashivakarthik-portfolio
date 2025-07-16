@@ -30,7 +30,7 @@ export default function Hero() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen text-center bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden dark:bg-gradient-to-br dark:from-white dark:to-gray-100">
+    <section className="flex flex-col items-center justify-center min-h-screen text-center bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden dark:bg-gradient-to-br dark:from-white dark:to-gray-100 fade-in">
       {/* Parallax SVG Layers with gradients */}
       <div ref={parallaxRef} className="absolute inset-0 z-0 pointer-events-none select-none">
         <svg className="parallax-layer absolute left-0 top-0 w-1/2 h-40 opacity-40" viewBox="0 0 400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -89,9 +89,9 @@ export default function Hero() {
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="z-10"
+        className="z-10 glass-card p-8"
       >
-        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 dark:text-gray-900">
+        <h1 className="text-4xl md:text-6xl heading mb-4 dark:text-gray-900">
           <Typewriter
             words={["Hi, I'm Karthik", "DevOps Engineer", "Cloud Enthusiast", "Open Source Contributor"]}
             loop={0}
@@ -102,20 +102,18 @@ export default function Hero() {
             delaySpeed={1200}
           />
         </h1>
-        <h2 className="text-xl md:text-2xl font-semibold mb-2 text-indigo-400 dark:text-blue-600">Somisetty Veera Shiva Karthik</h2>
+        <h2 className="text-xl md:text-2xl subheading mb-2 text-indigo-400 dark:text-blue-600">Somisetty Veera Shiva Karthik</h2>
         <p className="text-lg md:text-xl mb-6 text-gray-300 max-w-xl mx-auto dark:text-gray-700">
           Dedicated DevOps enthusiast passionate about automation, cloud, and scalable solutions.
         </p>
         <a href="#projects">
-          <button className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-full text-white font-semibold shadow-lg transition duration-300 dark:bg-blue-600 dark:hover:bg-blue-700">
-            View Projects
-          </button>
+          <button className="px-8 py-3 btn-primary">View Projects</button>
         </a>
         <a
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-4 px-6 py-2 bg-gray-800 hover:bg-indigo-600 text-white rounded-full font-semibold transition dark:bg-gray-200 dark:text-gray-900 dark:hover:bg-blue-600 dark:hover:text-white"
+          className="inline-block mt-4 px-6 py-2 btn-primary"
         >
           Preview / Download Resume
         </a>

@@ -1,3 +1,111 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes progress-bar {
+  from { width: 0; }
+  to { width: var(--progress); }
+}
+
+.fade-in {
+  animation: fade-in 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+.slide-in-left {
+  animation: slide-in-left 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+.slide-in-right {
+  animation: slide-in-right 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(8px);
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+  box-shadow: 0 2px 8px 0 rgba(67,56,202,0.15);
+  animation: progress-bar 1.2s cubic-bezier(0.4,0,0.2,1) both;
+}
+
+/* Social Icon Styles */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px 0 rgba(67,56,202,0.15);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+.social-icon:hover {
+  transform: scale(1.15) rotate(-8deg);
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  box-shadow: 0 4px 16px 0 rgba(67,56,202,0.25);
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 4px 16px 0 rgba(67,56,202,0.15);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #06b6d4 0%, #3b82f6 100%);
+  box-shadow: 0 8px 32px 0 rgba(67,56,202,0.25);
+  transform: scale(1.05);
+}
+
+/* Border Utilities */
+.rounded-xl { border-radius: 1rem; }
+.rounded-2xl { border-radius: 1.5rem; }
+.shadow-xl { box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37); }
+
+/* Typography */
+.heading {
+  font-family: 'Poppins', 'Roboto', 'Open Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.subheading {
+  font-family: 'Poppins', 'Roboto', 'Open Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Utility for fade-in on scroll */
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1), transform 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+[data-animate].is-visible {
+  opacity: 1;
+  transform: none;
+}

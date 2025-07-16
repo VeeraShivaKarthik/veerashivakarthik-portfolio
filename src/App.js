@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen font-sans dark:bg-white dark:text-gray-900 transition-colors duration-300">
+    <div className="bg-gradient-glass animate-gradient-x text-white min-h-screen font-sans dark:bg-white dark:text-gray-900 transition-colors duration-300">
       <Navbar />
       <div id="hero"><Hero /></div>
       <div id="about"><About /></div>
